@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 
-app.use(cors());
+app.use(cors({ origin: false }));
 // Middleware para analizar datos JSON
 app.use(express.json());
 
