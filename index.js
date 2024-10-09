@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const router = require('./routes/userRoutes');
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 3000;
+
 
 
 app.use(cors());
@@ -20,6 +20,6 @@ mongoose.connect(process.env.MONGO_URI)
 app.use('/api/users', router);
 
 // Iniciar el servidor
-app.listen(port, () => {
-  console.log(`Servidor ejecutándose en http://localhost:${port}`);
+app.listen( () => {
+console.log('En producción');
 });
