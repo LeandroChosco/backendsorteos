@@ -13,7 +13,7 @@ const albionUserSchema = new mongoose.Schema({
   estado: {
     type: String,
     required: true,
-    enum: ['pendiente', 'entregado'], // Puedes personalizar los estados
+    enum: ['pendiente', 'Depositado', 'Entregado'], // Puedes personalizar los estados
   },
   cliente:{
     type: String,
